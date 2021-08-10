@@ -14,6 +14,10 @@ public class Quarto {
 	public Quarto() {
 		super();
 	}
+	
+	public Quarto(Integer idQuarto) {
+		this.idQuarto = idQuarto;
+	}
 
 	public Quarto(Integer idQuarto, Hotel hotel, CategoriaQuarto categoriaQuarto, Integer qtdLeito, Integer nrQuarto,
 			Double prDiaria) {
