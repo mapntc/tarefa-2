@@ -64,7 +64,7 @@ public class Hospedagem {
 
 	@Override
 	public String toString() {
-		return "Hospedagem [idHospedagem=" + idHospedagem + ", idQuarto=" + idQuarto + ", idHospede=" + idHospede
+		return "Hospedagem [idHospedagem=" + idHospedagem + ", idQuarto=" + idQuarto.getIdQuarto() + ", idHospede=" + idHospede.getIdHospede()
 				+ ", dtCheckin=" + dtCheckin + ", dtCheckout=" + dtCheckout + "]";
 	}
 }

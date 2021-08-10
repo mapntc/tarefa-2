@@ -26,7 +26,7 @@ public class App {
 
 	public static void main(String[] args) {
 
-		testeCrudHospedagem();
+		testeCrudHospede();
 	}
 
 	public static void testeConexcao() {
@@ -184,7 +184,7 @@ public class App {
 		Hospedagem h2 = ctrl.findById(1);
 		System.out.println("UPDATE");
 		System.out.println("#ID original: " + h2);
-		h2.setDtCheckout(new Date(2001, 01, 02));
+		h2.setDtCheckout(new Date(01, 01, 02));
 		h2 = ctrl.update(h2);
 		System.out.println("#ID alterado: " + h2);
 
