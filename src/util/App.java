@@ -27,10 +27,10 @@ public class App {
 	public static void testeConexcao() {
 		try{
 			Connection con = (Connection) DriverManager.getConnection(
-				"jdbc:mysql://localhost:3306/db_hotel", "developer","1234");
-			System.out.println("Conexão funcionou");
+				"jdbc:mysql://localhost:3306/db_hotel?allowPublicKeyRetrieval=true&useSSL=false", "developer","1234");
+			System.out.println("Conexï¿½o funcionou");
 			}catch(SQLException e){
-				System.err.println("Conexão não funcionou");
+				System.err.println("Conexï¿½o nï¿½o funcionou");
 				System.out.println(e.getMessage());
 			}	
 	}
@@ -51,7 +51,7 @@ public class App {
 		
 		System.out.println("Cadastrar novo Hotel");
 		
-		Hotel h1 = new Hotel(null, "Hotel Goiânia", "Goiânia", 3);
+		Hotel h1 = new Hotel(null, "Hotel Goiï¿½nia", "Goiï¿½nia", 3);
 		//h1 = ctrl.insert(h1);
 		System.out.println(h1);
 		
@@ -101,10 +101,10 @@ public class App {
 					3,
 					120,
 					240.0);
-		//q1 = ctrl.insert(q1);
+		q1 = ctrl.insert(q1);
 		System.out.println(q1);
 		
-		Quarto q2 = ctrl.findById(3);
+		Quarto q2 = ctrl.findById(1);
 		System.out.println("UPDATE");
 		System.out.println("#ID original: "+q2);
 		q2.setPrDiaria(q2.getPrDiaria()+20);
